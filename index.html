@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign-Up Form</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1 class="sr-only">Odin Sign-Up Form</h1>
+		</header>
+		<main>
+            <div class="logo">
+                <img src="./images/odin-logo.png" alt="Face of a man with beard, wearing an eye patch and horned helmet" height="50" width="40">
+                <p>Odin</p>
+            </div>
+			<div class="intro">
+				<p>
+					This is not a real online service! You know you need something like
+					this in your life to help you realize your deepest dreams. Sign up
+					<em>now</em> to get started.
+				</p>
+				<p>You <em>know </em>you want to.</p>
+			</div>
+			<form class="form">
+				<p>Let's do this!</p>
+				<p>
+					Required fields are followed by
+					<strong><span aria-label="required">*</span></strong
+					>.
+				</p>
+				<section>
+                    <p>
+                        <label for="first-name"
+                            >First Name
+                            <strong><span aria-label="required">*</span></strong>
+                        </label>
+                        <input type="text" id="first-name" name="first-name" required />
+                    </p>
+                    <p>
+                        <label for="last-name"
+                            >Last Name <strong><span aria-label="required">*</span></strong></label
+                        ><input type="text" id="last-name" name="last-name" required />
+                    </p>
+                    <p>
+                        <label for="email"
+                            > Email <strong><span aria-label="required">*</span></strong></label
+                        ><input type="text" id="email" name="email" required />
+                    </p>
+                    <p>
+                        <label for="phone-num"
+                            >Phone Number <strong><span aria-label="required">*</span></strong></label
+                        ><input type="text" id="phone-num" name="phone-num" required />
+                    </p>
+                    <p>
+                        <label for="password"
+                            >Password <strong><span aria-label="required">*</span></strong></label
+                        ><input type="text" id="password" name="password" required />
+                    </p>
+                    <p>
+                        <label for="confirm-pw"
+                            >Confirm Password <strong><span aria-label="required">*</span></strong></label
+                        ><input type="text" id="confirm-pw" name="confirm-pw" required />
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        <button type="submit">Create Account</button>
+                    </p>
+                    <p>Already have an account?
+                        <a href="#">Log in</a>
+                    </p>
+                </section>
+			</form>
+			
+		</main>
+        <footer class="attribution">
+            <p>Photo by 
+                <a href="#">Halie West</a> on
+                <a href="#">Unsplash</a>
+            </p>
+        </footer>
+	</body>
+</html>
