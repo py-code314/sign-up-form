@@ -9,67 +9,71 @@
 	<body>
 		<header>
 			<h1 class="sr-only">Odin Sign-Up Form</h1>
+            <div class="logo">
+                <img class="logo__image" src="./assets/images/odin-logo.png" alt="Face of a man with beard, wearing an eye patch and horned helmet" height="50" width="40">
+                <p class="logo__name">Odin</p>
+            </div>
 		</header>
 		<main>
-            <div class="logo">
-                <img src="./images/odin-logo.png" alt="Face of a man with beard, wearing an eye patch and horned helmet" height="50" width="40">
-                <p>Odin</p>
-            </div>
+            
 			<div class="intro">
-				<p>
+				<p class="intro__description">
 					This is not a real online service! You know you need something like
 					this in your life to help you realize your deepest dreams. Sign up
 					<em>now</em> to get started.
 				</p>
-				<p>You <em>know </em>you want to.</p>
+				<p class="intro__cheer">You <em>know</em> you want to.</p>
 			</div>
 			<form class="form">
-				<p>Let's do this!</p>
-				<p>
+				<p class="form__cheer">Let's do this!</p>
+				<p class="form__instructions">
 					Required fields are followed by
 					<strong><span aria-label="required">*</span></strong
 					>.
 				</p>
-				<section>
-                    <p>
-                        <label for="first-name"
-                            >First Name
+				<section class="form__contact-info">
+                    <p class="form__group">
+                        <label for="first-name" class="form__label">
+                            First Name
                             <strong><span aria-label="required">*</span></strong>
                         </label>
-                        <input type="text" id="first-name" name="first-name" required />
+                        <input type="text" id="first-name" name="first-name" class="form__control" required />
                     </p>
-                    <p>
-                        <label for="last-name"
-                            >Last Name <strong><span aria-label="required">*</span></strong></label
-                        ><input type="text" id="last-name" name="last-name" required />
+                    <p class="form__group">
+                        <label for="last-name" class="form__label">
+                            Last Name <strong><span aria-label="required">*</span></strong></label>
+                            <input type="text" id="last-name" name="last-name" class="form__control" required />
                     </p>
-                    <p>
-                        <label for="email"
-                            > Email <strong><span aria-label="required">*</span></strong></label
-                        ><input type="text" id="email" name="email" required />
+                    <p class="form__group">
+                        <label for="email" class="form__label">
+                             Email <strong><span aria-label="required">*</span></strong></label>
+                            <input type="email" id="email" name="email" class="form__control" required />
                     </p>
-                    <p>
-                        <label for="phone-num"
+                    <p class="form__group">
+                        <label for="phone" class="form__label"
                             >Phone Number <strong><span aria-label="required">*</span></strong></label
-                        ><input type="text" id="phone-num" name="phone-num" required />
+                        >
+                        <input type="tel" id="phone" name="phone" class="form__control" required />
                     </p>
-                    <p>
-                        <label for="password"
+                    <p class="form__group">
+                        <label for="password" class="form__label"
                             >Password <strong><span aria-label="required">*</span></strong></label
-                        ><input type="text" id="password" name="password" required />
+                        >
+                        <input type="password" id="password" name="password" class="form__control" required />
                     </p>
-                    <p>
-                        <label for="confirm-pw"
+                    <p class="form__group">
+                        <label for="confirm-pw" class="form__label"
                             >Confirm Password <strong><span aria-label="required">*</span></strong></label
-                        ><input type="text" id="confirm-pw" name="confirm-pw" required />
+                        >
+                        <input type="password" id="confirm-pw" name="confirm-pw" class="form__control" required />
                     </p>
                 </section>
-                <section>
-                    <p>
-                        <button type="submit">Create Account</button>
+                <section class="form__account">
+                    <p class="form__button">
+                        <button class="button" type="submit">Create Account</button>
                     </p>
-                    <p>Already have an account?
-                        <a href="#">Log in</a>
+                    <p class="form__login">Already have an account?
+                        <a class="login" href="#">Log in</a>
                     </p>
                 </section>
 			</form>
