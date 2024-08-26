@@ -91,11 +91,12 @@
 								>Password
 								<strong><span aria-label="required">*</span></strong></label
 							>
-                            <span class="pw__requirements">Minimum of 8 characters with at least one number and one uppercase and lowercase letter</span>
-
+                            <span
+                            id="pw__restrictions" class="pw__requirements" aria-label="required">Minimum of 8 characters with at least one number and one uppercase and lowercase letter</span>
 							<input
 								type="password"
 								id="password"
+                                aria-describedby="pw__restrictions"
 								name="password"
                                 required
                                 pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
@@ -110,11 +111,13 @@
 								>Confirm Password
 								<strong><span aria-label="required">*</span></strong>
 							</label>
-                            <span class="pw__requirements">Minimum of 8 characters with at least one number and one uppercase and lowercase letter</span>
+                            <span 
+                            id="pw__restrictions" class="pw__requirements">Minimum of 8 characters with at least one number and one uppercase and lowercase letter</span>
 
 							<input
 								type="password"
 								id="confirm-pw"
+                                aria-describedby="pw__restrictions"
 								name="confirm-pw"
                                 required
                                 pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
