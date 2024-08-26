@@ -8,9 +8,11 @@
 }
 
 :root {
+    --bg-color-logo: rgba(0 0 0 / 0.5);
 	--bg-color-primary: #f9fafb;
 	--bg-color-form: #fff;
 	--bg-color-button: #596d48;
+    --bg-color-instructions: #ffa500;
     --bg-color-error: #B30404;
 
 	--border-color: #e5e7eb;
@@ -87,7 +89,6 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	font-family: var(--ff-body);
-	/* color: #fff; */
 	padding: var(--spacer-sm);
 	display: flex;
 	flex-direction: column;
@@ -107,16 +108,16 @@ body {
 
 .logo {
 	align-self: initial;
-	background-color: rgb(0 0 0 / 0.5);
+	background-color: var(--bg-color-logo);
 	border-radius: 5px;
 	font-family: var(--ff-logo);
-	color: #fff;
+	color: var(--bg-color-form);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: var(--spacer-sm);
 	padding: var(--spacer-xs);
-	/* margin-block-end: var(--spacer-sm); */
+	margin-block-end: var(--spacer-xs);
 }
 
 .logo__image {
@@ -128,13 +129,12 @@ body {
 }
 
 main {
-	border: 1px solid #fff;
 	border-radius: 5px;
+    margin-block-end: var(--spacer-xs);
 }
 
 .intro {
 	background-color: var(--bg-color-primary);
-
 	font-weight: var(--fw-bold);
 }
 
@@ -174,7 +174,7 @@ main {
 	appearance: none;
 	border: 1px solid var(--border-color);
 	border-radius: 5px;
-	padding: 0 10px;
+	padding: 0 var(--spacer-xs);
 	width: 90%;
 	background: none;
 	margin-block-end: var(--spacer-xs);
@@ -190,10 +190,20 @@ main {
 .pw__requirements {
     font-size: var(--fs-h6);
     font-weight: var(--fw-bold);
-    color: var(--bg-color-error);
+    background-color: var(--bg-color-instructions);
     display: block;
+    width: fit-content;
+    padding: 0.1rem 0.2rem;
     line-height: 1;
     margin-block-end: var(--spacer-xs);
+}
+
+.pw__requirements {
+    display: none;
+}
+
+.pw__container:focus-within .pw__requirements {
+    display: block;
 }
 
 .pw__container {
@@ -203,7 +213,7 @@ main {
 .pw__error-message {
 	visibility: hidden;
 	position: absolute;
-	width: 70%;
+	width: fit-content;
 	font-size: var(--fs-h6);
 	font-weight: var(--fw-bold);
     color: var(--bg-color-form);
@@ -212,7 +222,7 @@ main {
 	background-color: var(--bg-color-error);
 	padding: 0.1rem 0.2rem;
 	border-radius: 5px;
-	transition: visibility 0.3s ease-in-out;
+	/* transition: visibility 0.3s ease-in-out; */
 }
 
 .pw__input:invalid:not(:placeholder-shown) ~ .pw__error-message {
