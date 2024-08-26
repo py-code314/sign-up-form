@@ -9,14 +9,16 @@
 	<body>
 		<header>
 			<h1 class="sr-only">Odin Sign-Up Form</h1>
-            <div class="logo">
-                <img class="logo__image" src="./assets/images/odin-logo.png" alt="Face of a man with beard, wearing an eye patch and horned helmet" height="50" width="40">
-                <p class="logo__name">Odin</p>
-            </div>
+			<div class="logo">
+				<img
+					class="logo__image"
+					src="./assets/images/odin-logo.png"
+					alt="Face of a man with beard, wearing an eye patch and horned helmet" />
+				<p class="logo__name">Odin</p>
+			</div>
 		</header>
 		<main>
-            
-			<div class="intro">
+			<div class="intro container">
 				<p class="intro__description">
 					This is not a real online service! You know you need something like
 					this in your life to help you realize your deepest dreams. Sign up
@@ -25,65 +27,120 @@
 				<p class="intro__cheer">You <em>know</em> you want to.</p>
 			</div>
 			<form class="form">
-				<p class="form__cheer">Let's do this!</p>
-				<p class="form__instructions">
-					Required fields are followed by
-					<strong><span aria-label="required">*</span></strong
-					>.
-				</p>
-				<section class="form__contact-info">
-                    <p class="form__group">
-                        <label for="first-name" class="form__label">
-                            First Name
-                            <strong><span aria-label="required">*</span></strong>
-                        </label>
-                        <input type="text" id="first-name" name="first-name" class="form__control" required />
-                    </p>
-                    <p class="form__group">
-                        <label for="last-name" class="form__label">
-                            Last Name <strong><span aria-label="required">*</span></strong></label>
-                            <input type="text" id="last-name" name="last-name" class="form__control" required />
-                    </p>
-                    <p class="form__group">
-                        <label for="email" class="form__label">
-                             Email <strong><span aria-label="required">*</span></strong></label>
-                            <input type="email" id="email" name="email" class="form__control" required />
-                    </p>
-                    <p class="form__group">
-                        <label for="phone" class="form__label"
-                            >Phone Number <strong><span aria-label="required">*</span></strong></label
-                        >
-                        <input type="tel" id="phone" name="phone" class="form__control" required />
-                    </p>
-                    <p class="form__group">
-                        <label for="password" class="form__label"
-                            >Password <strong><span aria-label="required">*</span></strong></label
-                        >
-                        <input type="password" id="password" name="password" class="form__control" required />
-                    </p>
-                    <p class="form__group">
-                        <label for="confirm-pw" class="form__label"
-                            >Confirm Password <strong><span aria-label="required">*</span></strong></label
-                        >
-                        <input type="password" id="confirm-pw" name="confirm-pw" class="form__control" required />
-                    </p>
-                </section>
-                <section class="form__account">
-                    <p class="form__button">
-                        <button class="button" type="submit">Create Account</button>
-                    </p>
-                    <p class="form__login">Already have an account?
-                        <a class="login" href="#">Log in</a>
-                    </p>
-                </section>
+				<div class="form__details container">
+					<section class="form__intro">
+						<p class="form__cheer">Let's do this!</p>
+						<p class="form__instructions">
+							Required fields are followed by
+							<strong><span aria-label="required">*</span></strong
+							>.
+						</p>
+					</section>
+					<section class="form__contact-info">
+						<p class="form__group">
+							<label for="first-name" class="form__label">
+								First Name
+								<strong><span aria-label="required">*</span></strong>
+							</label>
+							<input
+								type="text"
+								id="first-name"
+								name="first-name"
+                                placeholder="First Name..."
+								class="form__control"
+								required />
+						</p>
+						<p class="form__group">
+							<label for="last-name" class="form__label">
+								Last Name
+								<strong><span aria-label="required">*</span></strong></label
+							>
+							<input
+								type="text"
+								id="last-name"
+								name="last-name"
+                                placeholder="Last Name..."
+								class="form__control"
+								required />
+						</p>
+						<p class="form__group">
+							<label for="email" class="form__label">
+								Email
+								<strong><span aria-label="required">*</span></strong></label
+							>
+							<input
+								type="email"
+								id="email"
+								name="email"
+                                placeholder="Email..."
+								class="form__control"
+								required />
+						</p>
+						<p class="form__group">
+							<label for="phone" class="form__label">Phone Number </label>
+							<input
+								type="tel"
+								id="phone"
+								name="phone"
+								placeholder="Eg: 123-456-7890"
+								class="form__control"
+								 />
+						</p>
+						<p class="form__group pw__container">
+							<label for="password" class="form__label"
+								>Password
+								<strong><span aria-label="required">*</span></strong></label
+							>
+                            <span class="pw__requirements">Minimum of 8 characters with at least one number and one uppercase and lowercase letter</span>
+
+							<input
+								type="password"
+								id="password"
+								name="password"
+                                required
+                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+                                placeholder="Must contain at least one number and one uppercase and lowercase letter, and at least 8 characters"
+								class="form__control pw__input"
+                                
+								 />
+							<span class="pw__error-message">Password doesn't meet requirements</span>
+						</p>
+						<p class="form__group pw__container">
+							<label for="confirm-pw" class="form__label "
+								>Confirm Password
+								<strong><span aria-label="required">*</span></strong>
+							</label>
+                            <span class="pw__requirements">Minimum of 8 characters with at least one number and one uppercase and lowercase letter</span>
+
+							<input
+								type="password"
+								id="confirm-pw"
+								name="confirm-pw"
+                                required
+                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+                                placeholder="Must contain at least one number and one uppercase and lowercase letter, and at least 8 characters"
+								class="form__control pw__input"
+								/>
+							<span class="pw__error-message">Password doesn't meet requirements</span>
+						</p>
+					</section>
+				</div>
+				<section class="form__account container">
+					<p class="form__button">
+						<button class="button" type="submit">Create Account</button>
+					</p>
+					<p class="form__login">
+						Already have an account?
+						<a class="login" href="#">Log in</a>
+					</p>
+				</section>
 			</form>
-			
 		</main>
-        <footer class="attribution">
-            <p>Photo by 
-                <a href="#">Halie West</a> on
-                <a href="#">Unsplash</a>
-            </p>
-        </footer>
+		<footer class="footer">
+			<p class="attribution">
+				Photo by <a href="#">Halie West</a> on
+				<a href="#">Unsplash</a>
+			</p>
+		</footer>
 	</body>
 </html>
