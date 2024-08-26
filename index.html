@@ -37,95 +37,107 @@
 						</p>
 					</section>
 					<section class="form__contact-info">
-						<p class="form__group">
-							<label for="first-name" class="form__label">
-								First Name
-								<strong><span aria-label="required">*</span></strong>
-							</label>
-							<input
-								type="text"
-								id="first-name"
-								name="first-name"
-                                placeholder="First Name..."
-								class="form__control"
-								required />
-						</p>
-						<p class="form__group">
-							<label for="last-name" class="form__label">
-								Last Name
-								<strong><span aria-label="required">*</span></strong></label
-							>
-							<input
-								type="text"
-								id="last-name"
-								name="last-name"
-                                placeholder="Last Name..."
-								class="form__control"
-								required />
-						</p>
-						<p class="form__group">
-							<label for="email" class="form__label">
-								Email
-								<strong><span aria-label="required">*</span></strong></label
-							>
-							<input
-								type="email"
-								id="email"
-								name="email"
-                                placeholder="Email..."
-								class="form__control"
-								required />
-						</p>
-						<p class="form__group">
-							<label for="phone" class="form__label">Phone Number </label>
-							<input
-								type="tel"
-								id="phone"
-								name="phone"
-								placeholder="Eg: 123-456-7890"
-								class="form__control"
-								 />
-						</p>
-						<p class="form__group pw__container">
-							<label for="password" class="form__label"
-								>Password
-								<strong><span aria-label="required">*</span></strong></label
-							>
-                            <span
-                            id="pw__restrictions" class="pw__requirements" aria-label="required">Minimum of 8 characters with at least one number and one uppercase and lowercase letter</span>
-							<input
-								type="password"
-								id="password"
-                                aria-describedby="pw__restrictions"
-								name="password"
-                                required
-                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
-                                placeholder="Must contain at least one number and one uppercase and lowercase letter, and at least 8 characters"
-								class="form__control pw__input"
-                                
-								 />
-							<span class="pw__error-message">Password doesn't meet requirements</span>
-						</p>
-						<p class="form__group pw__container">
-							<label for="confirm-pw" class="form__label "
-								>Confirm Password
-								<strong><span aria-label="required">*</span></strong>
-							</label>
-                            <span 
-                            id="pw__restrictions" class="pw__requirements">Minimum of 8 characters with at least one number and one uppercase and lowercase letter</span>
-
-							<input
-								type="password"
-								id="confirm-pw"
-                                aria-describedby="pw__restrictions"
-								name="confirm-pw"
-                                required
-                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
-                                placeholder="Must contain at least one number and one uppercase and lowercase letter, and at least 8 characters"
-								class="form__control pw__input"
-								/>
-							<span class="pw__error-message">Password doesn't meet requirements</span>
-						</p>
+						<div class="username">
+							<p class="form__group">
+								<label for="first-name" class="form__label">
+									First Name
+									<strong><span aria-label="required">*</span></strong>
+								</label>
+								<input
+									type="text"
+									id="first-name"
+									name="first-name"
+									placeholder="First Name..."
+									class="form__control"
+									required />
+							</p>
+							<p class="form__group">
+								<label for="last-name" class="form__label">
+									Last Name
+									<strong><span aria-label="required">*</span></strong></label
+								>
+								<input
+									type="text"
+									id="last-name"
+									name="last-name"
+									placeholder="Last Name..."
+									class="form__control"
+									required />
+							</p>
+						</div>
+						<div class="contact-info">
+							<p class="form__group">
+								<label for="email" class="form__label">
+									Email
+									<strong><span aria-label="required">*</span></strong></label
+								>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									placeholder="Email..."
+									class="form__control"
+									required />
+							</p>
+							<p class="form__group">
+								<label for="phone" class="form__label">Phone Number </label>
+								<input
+									type="tel"
+									id="phone"
+									name="phone"
+									placeholder="Eg: 123-456-7890"
+									class="form__control" />
+							</p>
+						</div>
+						<div class="password">
+							<p class="form__group pw__container">
+								<label for="password" class="form__label"
+									>Password
+									<strong><span aria-label="required">*</span></strong></label
+								>
+								<span
+									id="pw__restrictions"
+									class="pw__requirements"
+									aria-label="required"
+									>Minimum of 8 characters with at least one number and one
+									uppercase and lowercase letter</span
+								>
+								<input
+									type="password"
+									id="password"
+									aria-describedby="pw__restrictions"
+									name="password"
+									required
+									pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+									placeholder="Must contain at least one number and one uppercase and lowercase letter, and at least 8 characters"
+									class="form__control pw__input" />
+								<span class="pw__error-message"
+									>Password doesn't meet requirements</span
+								>
+							</p>
+							<p class="form__group pw__container">
+								<label for="confirm-pw" class="form__label"
+									>Confirm Password
+									<strong><span aria-label="required">*</span></strong>
+								</label>
+								<span id="pw__restrictions" class="pw__requirements"
+									>Minimum of 8 characters with at least one number and one
+									uppercase and lowercase letter</span
+								>
+								<input
+									type="password"
+									id="confirm-pw"
+									aria-describedby="pw__restrictions"
+									name="confirm-pw"
+									required
+									pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+									placeholder="Must contain at least one number and one uppercase and lowercase letter, and at least 8 characters"
+									class="form__control pw__input" />
+								<span class="pw__error-message"
+									>Password doesn't meet requirements</span
+								>
+							</p>
+						</div>
 					</section>
 				</div>
 				<section class="form__account container">
