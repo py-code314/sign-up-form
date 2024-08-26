@@ -8,12 +8,12 @@
 }
 
 :root {
-    --bg-color-logo: rgba(0 0 0 / 0.5);
+	--bg-color-logo: rgba(0 0 0 / 0.5);
 	--bg-color-primary: #f9fafb;
 	--bg-color-form: #fff;
 	--bg-color-button: #596d48;
-    --bg-color-instructions: #ffa500;
-    --bg-color-error: #B30404;
+	--bg-color-instructions: #ffa500;
+	--bg-color-error: #b30404;
 
 	--border-color: #e5e7eb;
 	--border-color-focus: #4682b4;
@@ -23,8 +23,10 @@
 	--ff-body: 'Rubik', sans-serif;
 	--ff-logo: 'Norse Bold', Arial, sans-serif;
 
-	--fs-h1: 2rem; /* 32px */
+	--fs-h1: 3rem; /* 48px */
 	--fs-h2: 1.5rem; /* 24px */
+	--fs-h3: 1.17rem; /* 18.72px */
+	--fs-h4: 1rem; /* 16px */
 	--fs-h5: 0.83rem; /* 13.28px */
 	--fs-h6: 0.67rem; /* 10.72px */
 
@@ -33,6 +35,8 @@
 	--spacer-xs: 0.5rem; /* 8px */
 	--spacer-sm: 1rem; /* 16px */
 	--spacer-md: 1.5rem; /* 24px */
+
+	--width-logo-image: 2.5rem; /* 40px */
 }
 /*
   1. Use a more-intuitive box-sizing model.
@@ -89,10 +93,11 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	font-family: var(--ff-body);
+	font-size: var(--fs-h4);
 	padding: var(--spacer-sm);
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	/* align-items: center; */
 }
 
@@ -107,6 +112,7 @@ body {
 }
 
 .logo {
+    /* height: 150px; */
 	align-self: initial;
 	background-color: var(--bg-color-logo);
 	border-radius: 5px;
@@ -121,21 +127,24 @@ body {
 }
 
 .logo__image {
-	width: 40px;
+	max-width: var(--width-logo-image);
 }
 
 .logo__name {
 	font-size: var(--fs-h1);
+    /* align-self: inherit; */
+    margin-block-start: 1rem;
 }
 
 main {
 	border-radius: 5px;
-    margin-block-end: var(--spacer-xs);
+	/* margin-block-end: var(--spacer-xs); */
 }
 
 .intro {
 	background-color: var(--bg-color-primary);
 	font-weight: var(--fw-bold);
+	font-size: var(--fs-h3);
 }
 
 .container {
@@ -148,15 +157,20 @@ main {
 
 .form__details {
 	background-color: var(--bg-color-form);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacer-md);
+	box-shadow: 0px 15px 10px -15px #111;
 }
 
-.form__intro {
+/* .form__intro {
 	margin-block-end: var(--spacer-sm);
-}
+} */
 
 .form__cheer {
 	margin-block-end: var(--spacer-xs);
 	font-weight: var(--fw-bold);
+	font-size: var(--fs-h3);
 }
 
 .form__group:not(:last-child) {
@@ -186,24 +200,23 @@ main {
 	box-shadow: var(--shadow);
 }
 
-
 .pw__requirements {
-    font-size: var(--fs-h6);
-    font-weight: var(--fw-bold);
-    background-color: var(--bg-color-instructions);
-    display: block;
-    width: fit-content;
-    padding: 0.1rem 0.2rem;
-    line-height: 1;
-    margin-block-end: var(--spacer-xs);
+	font-size: var(--fs-h6);
+	font-weight: var(--fw-bold);
+	background-color: var(--bg-color-instructions);
+	display: block;
+	width: fit-content;
+	padding: 0.1rem 0.2rem;
+	line-height: 1;
+	margin-block-end: var(--spacer-xs);
 }
 
 .pw__requirements {
-    display: none;
+	display: none;
 }
 
 .pw__container:focus-within .pw__requirements {
-    display: block;
+	display: block;
 }
 
 .pw__container {
@@ -216,7 +229,7 @@ main {
 	width: fit-content;
 	font-size: var(--fs-h6);
 	font-weight: var(--fw-bold);
-    color: var(--bg-color-form);
+	color: var(--bg-color-form);
 	bottom: -15px;
 	left: 0;
 	background-color: var(--bg-color-error);
@@ -257,6 +270,7 @@ main {
 	text-align: center;
 	color: var(--bg-color-form);
 	font-size: var(--fs-h5);
+	/* border: 1px solid #000; */
 }
 
 .attribution a {
@@ -265,4 +279,115 @@ main {
 
 .attribution a:visited {
 	color: var(--bg-color-form);
+}
+
+@media (min-width: 50rem) {
+	:root {
+		--width-logo-image: 5rem; /* 80px */
+		--fs-h1: 5rem; /* 80px */
+		--fs-h3: 1.5rem; /* 24px */
+		--fs-h4: 1.25rem; /* 20px */
+
+		--spacer-md: 2rem; /* 32px */
+	}
+
+	body {
+		background: none;
+		flex-direction: row;
+		padding: 0;
+		/* font-size: 1.25rem;  */
+		/* 20px */
+	}
+
+	header {
+		border: 1px solid #000;
+		width: 30%;
+		position: relative;
+		background: url(./assets/images/green-leaf-plant.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		flex-shrink: 0;
+	}
+
+    footer {
+		position: absolute;
+        width: 30%;
+		bottom: 0;
+		
+        
+        /* text-align: center; */
+	}
+
+	.logo {
+		position: absolute;
+		top: 200px;
+		width: 100%;
+	}
+
+	main {
+        flex: 1;
+		display: flex;
+		flex-direction: column;
+		/* align-items: flex-start; */
+	}
+
+	.intro {
+		min-height: 30%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		/* align-items: flex-start; */
+		gap: var(--spacer-sm);
+		/* font-size: var(--fs-h2); */
+	}
+
+	.intro__description {
+		max-width: 85%;
+	}
+
+	.form {
+		min-height: 70%;
+		display: flex;
+		flex-direction: column;
+		/* gap: var(--spacer-sm); */
+	}
+
+	.form__details {
+        position: relative;
+	}
+
+	.form__details::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		background: transparent;
+		box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3);
+		z-index: -1;
+	}
+
+	.username,
+	.contact-info,
+	.password {
+		display: flex;
+		gap: var(--spacer-md);
+		/* justify-content: space-around; */
+	}
+
+	.form__group {
+		width: 40%;
+	}
+
+	.form__account {
+		flex: 1;
+		/* box-shadow: inset 0 -5px 5px -5px #333; */
+	}
+
+	.button {
+		box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.3);
+	}
+
+	
 }
