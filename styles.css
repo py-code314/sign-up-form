@@ -210,7 +210,10 @@ main {
 
 .pw__container {
 	position: relative;
+	align-self: flex-start;
 }
+
+
 
 .pw__error-message {
 	visibility: hidden;
