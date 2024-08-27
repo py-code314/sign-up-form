@@ -49,6 +49,7 @@
 									name="first-name"
 									placeholder="First Name..."
 									class="form__control"
+                                    aria-label="First Name"
 									required />
 							</p>
 							<p class="form__group">
@@ -62,6 +63,7 @@
 									name="last-name"
 									placeholder="Last Name..."
 									class="form__control"
+                                    aria-label="Last Name"
 									required />
 							</p>
 						</div>
@@ -77,6 +79,7 @@
 									name="email"
 									placeholder="Email..."
 									class="form__control"
+                                    aria-label="Email"
 									required />
 							</p>
 							<p class="form__group">
@@ -86,7 +89,8 @@
 									id="phone"
 									name="phone"
 									placeholder="Eg: 123-456-7890"
-									class="form__control" />
+									class="form__control"
+                                    aria-label="Phone Number" />
 							</p>
 						</div>
 						<div class="form__password">
@@ -98,7 +102,7 @@
 								<span
 									id="pw__restrictions"
 									class="pw__requirements"
-									aria-label="required"
+                                    aria-live="polite" aria-hidden="true"									
 									>Minimum of 8 characters with at least one number and one
 									uppercase and lowercase letter</span
 								>
@@ -110,8 +114,9 @@
 									required
 									pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
 									placeholder="Must contain at least one number and one uppercase and lowercase letter, and at least 8 characters"
-									class="form__control pw__input" />
-								<span class="pw__error-message"
+									class="form__control pw__input"
+                                    aria-label="Password" />
+								<span class="pw__error-message" aria-live="assertive" role="alert"
 									>Password does not meet requirements</span
 								>
 							</p>
@@ -121,6 +126,7 @@
 									<strong><span aria-label="required">*</span></strong>
 								</label>
 								<span id="pw__restrictions" class="pw__requirements"
+                                aria-live="polite" aria-hidden="true"
 									>Minimum of 8 characters with at least one number and one
 									uppercase and lowercase letter</span
 								>
@@ -132,8 +138,9 @@
 									required
 									pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
 									placeholder="Must contain at least one number and one uppercase and lowercase letter, and at least 8 characters"
-									class="form__control pw__input" />
-								<span class="pw__error-message"
+									class="form__control pw__input"
+                                    aria-label="Confirm Password" />
+								<span class="pw__error-message" aria-live="assertive" role="alert"
 									>Password does not meet requirements</span
 								>
 							</p>
