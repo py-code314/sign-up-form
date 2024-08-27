@@ -1,3 +1,4 @@
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap');
 
 @font-face {
@@ -7,6 +8,7 @@
 	font-style: normal;
 }
 
+/* Variables */
 :root {
 	--bg-color-logo: rgba(0 0 0 / 0.5);
 	--bg-color-primary: #f2f4f6;
@@ -38,9 +40,9 @@
 	--spacer-md: 1.5rem; /* 24px */
 
 	--width-logo-image: 2.5rem; /* 40px */
-
 }
 
+/* Global Reset */
 *,
 *::before,
 *::after {
@@ -72,6 +74,7 @@ h6 {
 	overflow-wrap: break-word;
 }
 
+/* Style the body */
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
@@ -88,6 +91,7 @@ body {
 	justify-content: space-between;
 }
 
+/* Hide h1 */
 .sr-only {
 	height: 1px;
 	width: 1px;
@@ -98,6 +102,7 @@ body {
 	clip-path: inset(50%);
 }
 
+/* Styles for logo */
 .logo {
 	background-color: var(--bg-color-logo);
 	border-radius: 5px;
@@ -120,12 +125,14 @@ body {
 	margin-block-start: var(--spacer-sm);
 }
 
+/* Style main section */
 main {
 	border: 1px solid var(--bg-color-form);
 	border-radius: 10px;
 	overflow: hidden;
 }
 
+/* Styles for page intro section */
 .intro {
 	background-color: var(--bg-color-primary);
 	font-weight: var(--fw-bold);
@@ -139,6 +146,7 @@ main {
 	padding: var(--spacer-md);
 }
 
+/* Styles for form */
 .form__data {
 	background-color: var(--bg-color-form);
 	display: flex;
@@ -157,7 +165,7 @@ main {
 	font-size: var(--fs-h3);
 }
 
-
+/* Styles for form inputs */
 .form__fields,
 .form__fullname,
 .form__contact-info,
@@ -166,7 +174,6 @@ main {
 	flex-direction: column;
 	gap: var(--spacer-md);
 }
-
 
 .form__label {
 	display: block;
@@ -183,12 +190,14 @@ main {
 	background: none;
 }
 
+/* Focus styles */
 .form__control:focus {
 	outline: none;
 	border: 1px solid var(--border-color-focus);
 	box-shadow: var(--input-shadow);
 }
 
+/* Password requirements section styles */
 .pw__requirements {
 	font-size: var(--fs-h6);
 	font-weight: var(--fw-bold);
@@ -212,8 +221,7 @@ main {
 	position: relative;
 }
 
-
-
+/* Error message styles */
 .pw__error-message {
 	visibility: hidden;
 	position: absolute;
@@ -240,6 +248,7 @@ main {
 	visibility: hidden;
 }
 
+/* Styles for form button and login link */
 .form__btn-link {
 	background-color: var(--bg-color-primary);
 	display: flex;
@@ -264,6 +273,7 @@ main {
 	font-weight: var(--fw-bold);
 }
 
+/* Styles for footer */
 .footer {
 	text-align: center;
 	font-size: var(--fs-h5);
@@ -274,8 +284,9 @@ main {
 	color: #000;
 }
 
-
+/* Media query for desktop */
 @media (min-width: 50rem) {
+	/* Variables */
 	:root {
 		--width-logo-image: 5rem; /* 80px */
 		--fs-h1: 5rem; /* 80px */
@@ -293,7 +304,6 @@ main {
 		flex-direction: row;
 		padding: 0;
 		gap: 0;
-		
 	}
 
 	header {
@@ -324,6 +334,7 @@ main {
 		flex-direction: column;
 	}
 
+	/* Styles for page intro */
 	.intro {
 		min-height: 30%;
 		justify-content: flex-end;
@@ -333,6 +344,7 @@ main {
 		max-width: 60ch;
 	}
 
+	/* Styles for form */
 	.form {
 		min-height: 70%;
 		display: flex;
@@ -341,11 +353,10 @@ main {
 
 	.form__data {
 		position: relative;
-        box-shadow: 0 8px 8px -4px rgba(0 0 0 / 0.3);
+		box-shadow: 0 8px 8px -4px rgba(0 0 0 / 0.3);
 	}
 
-
-
+	/* Styles for form fields */
 	.form__fullname,
 	.form__contact-info,
 	.form__password {
@@ -361,6 +372,7 @@ main {
 		width: 40%;
 	}
 
+	/* Styles for error message */
 	.pw__container {
 		align-self: flex-start;
 	}
@@ -371,6 +383,7 @@ main {
 		width: fit-content;
 	}
 
+	/* Styles for form button and login link */
 	.form__btn-link {
 		flex: 1;
 	}
