@@ -210,7 +210,6 @@ main {
 
 .pw__container {
 	position: relative;
-	align-self: flex-start;
 }
 
 
@@ -356,6 +355,10 @@ main {
 
 	.form__group {
 		width: 40%;
+	}
+
+	.pw__container {
+		align-self: flex-start;
 	}
 
 	.pw__error-message {
