@@ -230,6 +230,10 @@ main {
 	visibility: visible;
 }
 
+.pw__input:invalid:not(:placeholder-shown) {
+	border: 2px solid var(--bg-color-error);
+}
+
 .pw__input:not(:placeholder-shown) ~ .pw__error-message {
 	visibility: hidden;
 }
