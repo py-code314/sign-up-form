@@ -353,6 +353,10 @@ main {
 		flex-direction: row;
 	}
 
+	.form__fields {
+		width: 80%;
+	}
+
 	.form__group {
 		width: 40%;
 	}
