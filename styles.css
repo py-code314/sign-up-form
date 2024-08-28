@@ -14,6 +14,7 @@
 	--bg-color-primary: #f2f4f6;
 	--bg-color-form: #fff;
 	--bg-color-button: #596d48;
+	--bg-color-button-hover: #F8F604;
 	--bg-color-instructions: #ffa500;
 	--bg-color-error: #b30404;
 
@@ -167,9 +168,7 @@ main {
 
 /* Styles for form inputs */
 .form__fields,
-.form__fullname,
-.form__contact-info,
-.form__password {
+.form__inputs {
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacer-md);
@@ -257,7 +256,7 @@ main {
 	gap: var(--spacer-sm);
 }
 
-.button {
+.form__btn {
 	background-color: var(--bg-color-button);
 	padding: 0.3em 1.5em;
 	border-radius: 5px;
@@ -307,36 +306,34 @@ main {
 	}
 
 	header {
-		width: 30%;
-		position: relative;
+		flex: 1;
 		background: url(./assets/images/bee-sunflower.png);
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		flex-shrink: 0;
 	}
 
 	footer {
 		position: absolute;
-		width: 30%;
+		width: 33.3%;
 		bottom: 0;
+		left: 0;
 	}
 
 	.logo {
-		position: absolute;
-		top: 200px;
 		width: 100%;
+		margin-block-start: 12.5rem;
 	}
 
 	main {
-		flex: 1;
+		flex: 2;
 		display: flex;
 		flex-direction: column;
 	}
 
 	/* Styles for page intro */
 	.intro {
-		min-height: 30%;
+		flex: 1;
 		justify-content: flex-end;
 	}
 
@@ -346,7 +343,7 @@ main {
 
 	/* Styles for form */
 	.form {
-		min-height: 70%;
+		flex: 3;
 		display: flex;
 		flex-direction: column;
 	}
@@ -357,10 +354,7 @@ main {
 	}
 
 	/* Styles for form fields */
-	.form__fullname,
-	.form__contact-info,
-	.form__password {
-		display: flex;
+	.form__inputs {
 		flex-direction: row;
 	}
 
@@ -382,9 +376,16 @@ main {
 		line-height: 1;
 		width: fit-content;
 	}
-
+ 
 	/* Styles for form button and login link */
 	.form__btn-link {
 		flex: 1;
+	}
+
+	.form__btn:hover,
+	.form__btn:focus {
+		background-color: var(--bg-color-button-hover);
+		color: #000;
+		outline: none;
 	}
 }
